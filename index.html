@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- HTML for the buttons -->
+<button id="add-button">Add</button>
+<button id="subtract-button">Subtract</button>
+
+<!-- This element will be used to display the current value -->
+<div id="value-display">0</div>
+
+<!-- JavaScript to handle button clicks and update the value -->
+<script>
+  // Get references to the buttons and the value display
+  const addButton = document.getElementById('add-button');
+  const subtractButton = document.getElementById('subtract-button');
+  const valueDisplay = document.getElementById('value-display');
+
+  // Initialize the current value to 0
+  let currentValue = 0;
+
+  // Set up event listeners for the buttons
+  addButton.addEventListener('click', () => {
+    currentValue += 1;
+    valueDisplay.innerText = currentValue;
+  });
+  subtractButton.addEventListener('click', () => {
+    currentValue -= 1;
+    valueDisplay.innerText = currentValue;
+  });
+</script>
+
+</body>
+</html>
